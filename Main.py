@@ -14,13 +14,13 @@ from collections import defaultdict
 
 # This class represents a directed graph 
 # using adjacency list representation 
-class Node:
+class Node(object):
     #constructor
     def __init__(self):
-        visted = False;
-        parentNode = None;
-        possibleMoves = [];
-        possibleMovesCost = [];
+        visted = False
+        parentNode = None
+        possibleMoves = []
+        possibleMovesCost = []
         
 class Graph: 
 
@@ -32,36 +32,68 @@ class Graph:
         
 	# function to add an edge to graph 
 	def addEdge(self,currentTransition,destinationTransition,costTransition):
-            self.graph[currentTransition].possibleMoves.append(destinationTransition);
-            self.graph[currentTransition].possibleMovesCost.append(costTransition);
+            self.graph[currentTransition].possibleMoves.append(destinationTransition)
+            self.graph[currentTransition].possibleMovesCost.append(costTransition)
 
 	# Function to print a BFS of graph 
-	def BFS(self, s): 
+	def BFS(self,startNode,goalNode): 
 
 		# Create a queue for BFS 
 		queue = [] 
-
 		# Mark the source node as 
 		# visited and enqueue it 
-		queue.append(s) 
+		queue.append(startNode)
 
 		while queue: 
-
 			# Dequeue a vertex from 
 			# queue and print it 
-			s = queue.pop(0) 
-			print (s, end = " ") 
+			currentNode = queue.pop(0) 
+			print (currentNode, end = " ") 
 
 			# Get all adjacent vertices of the 
 			# dequeued vertex s. If a adjacent 
 			# has not been visited, then mark it 
 			# visited and enqueue it 
-			for i in self.graph[s]: 
-				if visited[i] == False: 
+			possibleMovesArray = self.graph[currentNode].possibleMoves
+			for i in possibleMovesArray: 
+				if goalNode == possibleMovesArray[i]:
+					goal = possibleMovesArray[i]
+					queue = []
+					break
+				if possibleMovesArray[i].visited == False: 
+					possibleMovesArray[i].parentNode = currentNode
 					queue.append(i) 
-					visited[i] = True
+					possibleMovesArray[i].visited = True
+
+		# goal Node now in Goal backtrack to get Path
+
+		if goal is None:
+			pathInverted = []
+			pathInverted.append(goal)
+			while True:
+				goal = goal.parentNode
+				pathInverted.append(goal)
+				if(goal == goalNode):
+					break
+
+
+			
 
 # Driver code 
+allStations = []
+linesSeperated = []
+linesSeperated = uBahnData.split("#")
+
+for line in linesSeperated:
+	lineSeperated = line.split(",")
+	for x in range (0,len(lineSeperated)-1):
+		if not (allStations.__contains__(lineSeperated[x])):
+			allStations.append(lineSeperated[x])
+		x+=1
+
+print(allStations.count)
+print(allStations)
+	
 
 # Create a graph given in 
 # the above diagram 
@@ -80,8 +112,7 @@ g.addEdge(3, 3,10)
 
 
 
-print ("Following is Breadth First Traversal"
-				" (starting from vertex 2)") 
-g.BFS(2) 
+#print ("Following is Breadth First Traversal" " (starting from vertex 2)") 
+#g.BFS(2) 
 
 # This code is contributed by Neelam Yadav 
