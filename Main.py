@@ -1,7 +1,9 @@
 # Reading the data of the stations from a text file
-parentPath = "/Users/MohamedAshraf/Documents/GitHub/BVG-System/"
+parentPath = "/Users/Omar Rifky/Documents/GitHub/BVG-System/"
 stationsTextFile = open(parentPath + "Stations.txt", "r")
 uBahnData = stationsTextFile.read()
+#data = uBahnData.split(",");
+#print(data);
 print(uBahnData)
 
 ###############################################
@@ -12,23 +14,29 @@ from collections import defaultdict
 
 # This class represents a directed graph 
 # using adjacency list representation 
+class Node:
+    #constructor
+    def __init__(self):
+        visted = False;
+        parentNode = None;
+        possibleMoves = [];
+        possibleMovesCost = [];
+        
 class Graph: 
 
 	# Constructor 
 	def __init__(self): 
 
 		# default dictionary to store graph 
-		self.graph = defaultdict(list) 
-
+		self.graph = defaultdict(Node) 
+        
 	# function to add an edge to graph 
-	def addEdge(self,u,v): 
-		self.graph[u].append(v) 
+	def addEdge(self,currentTransition,destinationTransition,costTransition):
+            self.graph[currentTransition].possibleMoves.append(destinationTransition);
+            self.graph[currentTransition].possibleMovesCost.append(costTransition);
 
 	# Function to print a BFS of graph 
 	def BFS(self, s): 
-
-		# Mark all the vertices as not visited 
-		visited = [False] * (len(self.graph)) 
 
 		# Create a queue for BFS 
 		queue = [] 
@@ -36,7 +44,6 @@ class Graph:
 		# Mark the source node as 
 		# visited and enqueue it 
 		queue.append(s) 
-		visited[s] = True
 
 		while queue: 
 
@@ -59,12 +66,19 @@ class Graph:
 # Create a graph given in 
 # the above diagram 
 g = Graph() 
-g.addEdge(0, 1) 
-g.addEdge(0, 2) 
-g.addEdge(1, 2) 
-g.addEdge(2, 0) 
-g.addEdge(2, 3) 
-g.addEdge(3, 3) 
+g.addEdge(0, 1,5) 
+g.addEdge(0, 2,6) 
+g.addEdge(1, 2,7) 
+g.addEdge(2, 0,8) 
+g.addEdge(2, 3,9) 
+g.addEdge(3, 3,10) 
+
+
+
+
+
+
+
 
 print ("Following is Breadth First Traversal"
 				" (starting from vertex 2)") 
