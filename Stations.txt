@@ -16,4 +16,4 @@ U8: S+U Wittenau (Berlin) [U8],U Rathaus Reinickendorf (Berlin),S+U Karl-Bonhoef
 
 U9: S+U Rathaus Steglitz (Berlin) [U9],U Schloßstr. (Berlin),U Walther-Schreiber-Platz (Berlin),U Friedrich-Wilhelm-Platz (Berlin),S+U Bundesplatz (Berlin),U Berliner Str. (Berlin),U Güntzelstr. (Berlin),U Spichernstr. (Berlin),U Kurfürstendamm (Berlin),S+U Zoologischer Garten Bhf (Berlin),U Hansaplatz (Berlin),U Turmstr. (Berlin),U Birkenstr. (Berlin),S+U Westhafen (Berlin),U Amrumer Str. (Berlin),U Leopoldplatz (Berlin),U Nauener Platz (Berlin),U Osloer Str. (Berlin)
 
-U55: U Brandenburger-Tor,U Bundestag,U Berlin-Hauptbahnof
+U55: U Brandenburger-Tor,0,U Bundestag,1,U Berlin-Hauptbahnof,2,
