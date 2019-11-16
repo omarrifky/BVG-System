@@ -4,7 +4,7 @@ U2: U Ruhleben (Berlin),47,U Olympia-Stadion (Berlin),45,U Neu-Westend (Berlin),
 
 U3: U-Bahnhof-Krumme-Lanke (Berlin),40,U Onkel Toms Hütte (Berlin),38,U Oskar-Helene-Heim (Berlin),36,U Freie Universität (Thielplatz) (Berlin),34,U Dahlem-Dorf (Berlin),32,U Podbielskiallee (Berlin),31,U Breitenbachplatz (Berlin),29,U Rüdesheimer Platz (Berlin),28,S+U Heidelberger Platz (Berlin),26,U Fehrbelliner Platz (Berlin),24,U Hohenzollernplatz (Berlin),23,U Spichernstr. (Berlin),21,U Augsburger Str. (Berlin),20,U Wittenbergplatz (Berlin),18,U Nollendorfplatz (Berlin),16,U Kurfürstenstr. (Berlin),14,U Gleisdreieck (Berlin),12,U Möckernbrücke (Berlin),11,U Hallesches Tor (Berlin),9,U Prinzenstr. (Berlin),7,U Kottbusser Tor (Berlin),5,U Görlitzer Bahnhof (Berlin),4,U Schlesisches Tor (Berlin),2,S+U Warschauer Str. (Berlin),0
 
-U4: S+U Innsbrucker Platz (Berlin),U Rathaus Schöneberg (Berlin),U Bayerischer Platz (Berlin),U Viktoria-Luise-Platz (Berlin),U Nollendorfplatz (Berlin)
+U4: S+U Innsbrucker Platz (Berlin),6,U Rathaus Schöneberg (Berlin),5,U Bayerischer Platz (Berlin),3,U Viktoria-Luise-Platz (Berlin),2,U Nollendorfplatz (Berlin),0
 
 U5: U Alexanderplatz,U Schillingstr,U Strausberger Platz (Berlin),U Weberwiese (Berlin),U Frankfurter Tor (Berlin),U Samariterstr. (Berlin),S+U Frankfurter Allee (Berlin),U Magdalenenstr. (Berlin),S+U Lichtenberg (Berlin) [U5],U Friedrichsfelde (Berlin),U Tierpark (Berlin),U Biesdorf-Sud,U Honow
 
