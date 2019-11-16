@@ -1,4 +1,10 @@
+# Reading the data of the stations from a text file
+parentPath = "/Users/MohamedAshraf/Documents/GitHub/BVG-System/"
+stationsTextFile = open(parentPath + "Stations.txt", "r")
+uBahnData = stationsTextFile.read()
+print(uBahnData)
 
+###############################################
 # Python3 Program to print BFS traversal 
 # from a given source vertex. BFS(int s) 
 # traverses vertices reachable from s. 
