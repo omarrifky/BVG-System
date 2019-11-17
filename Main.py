@@ -31,12 +31,14 @@ class Graph:
 		self.graph = defaultdict(Node) 
         
 	# Function to print a BFS of graph 
-    def BFS(self,startNode,goalNode): 
+	def BFS(self,startNode,goalNode): 
+
 		# Create a queue for BFS 
-	    queue = [] 
+		queue = [] 
 		# Mark the source node as 
 		# visited and enqueue it 
 		queue.append(startNode)
+
 		while queue: 
 			# Dequeue a vertex from 
 			# queue and print it 
@@ -44,11 +46,11 @@ class Graph:
 			# Get all adjacent vertices of the 
 			# dequeued vertex s. If a adjacent 
 			# has not been visited, then mark it 
-			# visited and enqueue it
+			# visited and enqueue it 
 			possibleMovesArray = self.graph[currentNode].possibleMoves
-            for i in possibleMovesArray:
-			    if goalNode == possibleMovesArray[i]:
-				    goal = possibleMovesArray[i]
+			for i in possibleMovesArray: 
+				if goalNode == possibleMovesArray[i]:
+					goal = possibleMovesArray[i]
 					queue = []
 					break
 				if possibleMovesArray[i].visited == False: 
