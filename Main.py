@@ -1,5 +1,5 @@
 # Reading the data of the stations from a text file
-parentPath = "/Users/MohamedAshraf/Documents/GitHub/BVG-System/"
+parentPath = "/Users/ziko137/Documents/GitHub/BVG-System/"
 stationsTextFile = open(parentPath + "Stations.txt", "r")
 uBahnData = stationsTextFile.read()
 #data = uBahnData.split(",");
@@ -16,11 +16,12 @@ from collections import defaultdict
 # using adjacency list representation 
 class Node(object):
     #constructor
-    def __init__(self):
+    def __init__(self,ID):
         self.visited = False
         self.parentNode = None
         self.possibleMoves = []
         self.possibleMovesCost = []
+        self.id = ID
         
 class Graph: 
 
@@ -40,7 +41,7 @@ class Graph:
 		# visited and enqueue it 
 		queue.append(startNode)
 
-		goal = Node()
+		goal = Node(-1)
         
 		while queue: 
 			# Dequeue a vertex from 
@@ -52,30 +53,30 @@ class Graph:
 			# visited and enqueue it 
 			possibleMovesArray = self.graph[currentNode].possibleMoves
 			for i in range(0,len(possibleMovesArray)):
-				print(self.graph[possibleMovesArray[i]])
 				if goalNode == possibleMovesArray[i]:
-					print("hi")
 					goal = self.graph[possibleMovesArray[i]]
-					self.graph[possibleMovesArray[i]].parentNode = currentNode
+					goal.parentNode = self.graph[currentNode]
 					queue = []
 					break
 				if self.graph[possibleMovesArray[i]].visited == False: 
-					self.graph[possibleMovesArray[i]].parentNode = currentNode
-					queue.append(i) 
+					self.graph[possibleMovesArray[i]].parentNode = self.graph[currentNode]
+					queue.append(possibleMovesArray[i]) 
 					self.graph[possibleMovesArray[i]].visited = True
 
 		# goal Node now in Goal backtrack to get Path
-
-		if not(goal is None):
+		#print(goal.id)
+		if not(goal.id ==-1):
 			pathInverted = []
-			pathInverted.append(goal)
 			while True:
-				if not(goal is None):
-				    goal = goal.parentNode
 				pathInverted.append(goal)
-				if(goal == goalNode):
+				if (goal.parentNode is None):
 					break
-			print(pathInverted)		
+				else:
+					goal = goal.parentNode
+				
+			for x in pathInverted:
+				print(x.id)
+
 
 			
 
@@ -93,7 +94,7 @@ g = Graph()
 
 for j in range(0,len(allStations)-1):
 	station = allStations[j]
-	stationNode = Node()
+	stationNode = Node(j)
 	for line in linesSeperated:
 		lineSeperated = line.split(",")
 		for x in range (0,len(lineSeperated)-1):
@@ -107,11 +108,10 @@ for j in range(0,len(allStations)-1):
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x-2]))
 					stationNode.possibleMovesCost.append(abs(cost))
 	g.graph[j] = stationNode
-    
-print(1)
 
-#print(g.graph[3].possibleMoves)
-g.BFS(0,1)
+
+print(g.graph[2].possibleMoves)
+#g.BFS(0,3)
 	
 
 # Create a graph given in 
