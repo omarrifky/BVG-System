@@ -32,7 +32,6 @@ class Graph:
         
 	# Function to print a BFS of graph 
 	def BFS(self,startNode,goalNode): 
-
 		# Create a queue for BFS 
 		queue = [] 
 		# Mark the source node as 
@@ -48,19 +47,19 @@ class Graph:
 			# has not been visited, then mark it 
 			# visited and enqueue it 
 			possibleMovesArray = self.graph[currentNode].possibleMoves
-			for i in possibleMovesArray: 
+			for i in range(0,len(possibleMovesArray)): 
 				if goalNode == possibleMovesArray[i]:
 					goal = possibleMovesArray[i]
 					queue = []
 					break
-				if possibleMovesArray[i].visited == False: 
-					possibleMovesArray[i].parentNode = currentNode
+				if self.graph[possibleMovesArray[i]].visited == False: 
+					self.graph[possibleMovesArray[i]].parentNode = currentNode
 					queue.append(i) 
-					possibleMovesArray[i].visited = True
+					self.graph[possibleMovesArray[i]].visited = True
 
 		# goal Node now in Goal backtrack to get Path
 
-		if goal is None:
+		if not(goal is None):
 			pathInverted = []
 			pathInverted.append(goal)
 			while True:
