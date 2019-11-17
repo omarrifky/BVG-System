@@ -51,10 +51,12 @@ class Graph:
 			# has not been visited, then mark it 
 			# visited and enqueue it 
 			possibleMovesArray = self.graph[currentNode].possibleMoves
-			for i in range(0,len(possibleMovesArray)):                
-				if goalNode == self.graph[possibleMovesArray[i]]:
+			for i in range(0,len(possibleMovesArray)):
+				print(self.graph[possibleMovesArray[i]])
+				if goalNode == possibleMovesArray[i]:
 					print("hi")
 					goal = self.graph[possibleMovesArray[i]]
+					self.graph[possibleMovesArray[i]].parentNode = currentNode
 					queue = []
 					break
 				if self.graph[possibleMovesArray[i]].visited == False: 
@@ -105,6 +107,8 @@ for j in range(0,len(allStations)-1):
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x-2]))
 					stationNode.possibleMovesCost.append(abs(cost))
 	g.graph[j] = stationNode
+    
+print(1)
 
 #print(g.graph[3].possibleMoves)
 g.BFS(0,1)
