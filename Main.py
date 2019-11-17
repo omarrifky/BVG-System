@@ -1,6 +1,6 @@
 # Reading the data of the stations from a text file
-parentPath = "/Users/ziko137/Documents/GitHub/BVG-System/"
-stationsTextFile = open(parentPath + "Stations.txt", "r")
+import os.path
+stationsTextFile = open(os.path.dirname(__file__)+"/Stations.txt", "r")
 uBahnData = stationsTextFile.read()
 
 # Imports
