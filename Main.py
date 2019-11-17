@@ -17,7 +17,7 @@ from collections import defaultdict
 class Node(object):
     #constructor
     def __init__(self):
-        self.visted = False
+        self.visited = False
         self.parentNode = None
         self.possibleMoves = []
         self.possibleMovesCost = []
@@ -30,20 +30,13 @@ class Graph:
 		# default dictionary to store graph 
 		self.graph = defaultdict(Node) 
         
-	# function to add an edge to graph 
-	def addEdge(self,currentTransition,destinationTransition,costTransition):
-            self.graph[currentTransition].possibleMoves.append(destinationTransition)
-            self.graph[currentTransition].possibleMovesCost.append(costTransition)
-
 	# Function to print a BFS of graph 
-	def BFS(self,startNode,goalNode): 
-
+    def BFS(self,startNode,goalNode): 
 		# Create a queue for BFS 
-		queue = [] 
+	    queue = [] 
 		# Mark the source node as 
 		# visited and enqueue it 
 		queue.append(startNode)
-
 		while queue: 
 			# Dequeue a vertex from 
 			# queue and print it 
@@ -51,11 +44,11 @@ class Graph:
 			# Get all adjacent vertices of the 
 			# dequeued vertex s. If a adjacent 
 			# has not been visited, then mark it 
-			# visited and enqueue it 
+			# visited and enqueue it
 			possibleMovesArray = self.graph[currentNode].possibleMoves
-			for i in possibleMovesArray: 
-				if goalNode == possibleMovesArray[i]:
-					goal = possibleMovesArray[i]
+            for i in possibleMovesArray:
+			    if goalNode == possibleMovesArray[i]:
+				    goal = possibleMovesArray[i]
 					queue = []
 					break
 				if possibleMovesArray[i].visited == False: 
@@ -79,7 +72,6 @@ class Graph:
 
 # Driver code 
 allStations = []
-linesSeperated = []
 uBahnData = uBahnData.replace("\n","")
 linesSeperated = uBahnData.split("#")
 
@@ -97,16 +89,17 @@ for j in range(0,len(allStations)-1):
 		lineSeperated = line.split(",")
 		for x in range (0,len(lineSeperated)-1):
 			if lineSeperated[x] == station:
-				if x + 3 < len(allStations)-1 : 
+				if (x + 3) < (len(lineSeperated)-1) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x+2]))): 
 					cost = int(lineSeperated[x+3]) - int(lineSeperated[x+1])
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
 					stationNode.possibleMovesCost.append(abs(cost))
-				if x > 1 :
+				if x > 1 and x+1 < (len(lineSeperated)-1) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x-2]))):
 					cost = int(lineSeperated[x-1]) - int(lineSeperated[x+1])
-					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
+					stationNode.possibleMoves.append(allStations.index(lineSeperated[x-2]))
 					stationNode.possibleMovesCost.append(abs(cost))
 	g.graph[j] = stationNode
 
+#print(g.graph[3].possibleMoves)
 g.BFS(1,6)
 	
 
