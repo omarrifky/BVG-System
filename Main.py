@@ -1,5 +1,5 @@
 # Reading the data of the stations from a text file
-parentPath = "/Users/Omar Rifky/Documents/GitHub/BVG-System/"
+parentPath = "/Users/MohamedAshraf/Documents/GitHub/BVG-System/"
 stationsTextFile = open(parentPath + "Stations.txt", "r")
 uBahnData = stationsTextFile.read()
 #data = uBahnData.split(",");
@@ -34,10 +34,14 @@ class Graph:
 	def BFS(self,startNode,goalNode): 
 		# Create a queue for BFS 
 		queue = [] 
+        
+        
 		# Mark the source node as 
 		# visited and enqueue it 
 		queue.append(startNode)
 
+		goal = Node()
+        
 		while queue: 
 			# Dequeue a vertex from 
 			# queue and print it 
@@ -47,9 +51,10 @@ class Graph:
 			# has not been visited, then mark it 
 			# visited and enqueue it 
 			possibleMovesArray = self.graph[currentNode].possibleMoves
-			for i in range(0,len(possibleMovesArray)): 
-				if goalNode == possibleMovesArray[i]:
-					goal = possibleMovesArray[i]
+			for i in range(0,len(possibleMovesArray)):                
+				if goalNode == self.graph[possibleMovesArray[i]]:
+					print("hi")
+					goal = self.graph[possibleMovesArray[i]]
 					queue = []
 					break
 				if self.graph[possibleMovesArray[i]].visited == False: 
@@ -63,7 +68,8 @@ class Graph:
 			pathInverted = []
 			pathInverted.append(goal)
 			while True:
-				goal = goal.parentNode
+				if not(goal is None):
+				    goal = goal.parentNode
 				pathInverted.append(goal)
 				if(goal == goalNode):
 					break
@@ -101,7 +107,7 @@ for j in range(0,len(allStations)-1):
 	g.graph[j] = stationNode
 
 #print(g.graph[3].possibleMoves)
-g.BFS(1,6)
+g.BFS(0,1)
 	
 
 # Create a graph given in 
