@@ -4,7 +4,7 @@ stationsTextFile = open(parentPath + "Stations.txt", "r")
 uBahnData = stationsTextFile.read()
 #data = uBahnData.split(",");
 #print(data);
-print(uBahnData)
+#print(uBahnData)
 
 ###############################################
 # Python3 Program to print BFS traversal 
@@ -82,28 +82,29 @@ class Graph:
 # Driver code 
 allStations = []
 linesSeperated = []
-linesSeperated = uBahnData.split("#")
+linesSeperated = uBahnData.replace("\n","").split("#")
 
 for line in linesSeperated:
 	lineSeperated = line.split(",")
-	for x in range (0,len(lineSeperated)-1):
-		if not (allStations.__contains__(lineSeperated[x])):
-			allStations.append(lineSeperated[x])
-		x+=1
+	for x in range (0,len(lineSeperated)-1,2):
+         if not(allStations.__contains__(lineSeperated[x])):
+             allStations.append(lineSeperated[x])
+    		
+       
 
-print(allStations.count)
+print(len(allStations))
 print(allStations)
 	
 
 # Create a graph given in 
 # the above diagram 
-g = Graph() 
-g.addEdge(0, 1,5) 
-g.addEdge(0, 2,6) 
-g.addEdge(1, 2,7) 
-g.addEdge(2, 0,8) 
-g.addEdge(2, 3,9) 
-g.addEdge(3, 3,10) 
+#g = Graph() 
+#g.addEdge(0, 1,5) 
+#g.addEdge(0, 2,6) 
+#g.addEdge(1, 2,7) 
+#g.addEdge(2, 0,8) 
+#g.addEdge(2, 3,9) 
+#g.addEdge(3, 3,10) 
 
 
 
