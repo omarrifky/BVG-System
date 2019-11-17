@@ -17,10 +17,10 @@ from collections import defaultdict
 class Node(object):
     #constructor
     def __init__(self):
-        visted = False
-        parentNode = None
-        possibleMoves = []
-        possibleMovesCost = []
+        self.visted = False
+        self.parentNode = None
+        self.possibleMoves = []
+        self.possibleMovesCost = []
         
 class Graph: 
 
@@ -82,14 +82,33 @@ class Graph:
 # Driver code 
 allStations = []
 linesSeperated = []
-linesSeperated = uBahnData.replace("\n","").split("#")
+uBahnData = uBahnData.replace("\n","")
+linesSeperated = uBahnData.split("#")
 
 for line in linesSeperated:
 	lineSeperated = line.split(",")
 	for x in range (0,len(lineSeperated)-1,2):
          if not(allStations.__contains__(lineSeperated[x])):
              allStations.append(lineSeperated[x])
-    		
+g = Graph()
+
+for j in range(0,len(allStations)-1):
+	station = allStations[j]
+	stationNode = Node()
+	for line in linesSeperated:
+		lineSeperated = line.split(",")
+		for x in range (0,len(lineSeperated)-1):
+			if lineSeperated[x] == station:
+				if x + 3 < len(allStations)-1 : 
+					cost = int(lineSeperated[x+3]) - int(lineSeperated[x+1])
+					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
+					stationNode.possibleMovesCost.append(abs(cost))
+				if x > 1 :
+					cost = int(lineSeperated[x-1]) - int(lineSeperated[x+1])
+					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
+					stationNode.possibleMovesCost.append(abs(cost))
+	g.graph.append(stationNode)
+
        
 
 print(len(allStations))
