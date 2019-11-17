@@ -48,8 +48,6 @@ class Graph:
 			# Dequeue a vertex from 
 			# queue and print it 
 			currentNode = queue.pop(0) 
-			print (currentNode, end = " ") 
-
 			# Get all adjacent vertices of the 
 			# dequeued vertex s. If a adjacent 
 			# has not been visited, then mark it 
@@ -75,7 +73,7 @@ class Graph:
 				pathInverted.append(goal)
 				if(goal == goalNode):
 					break
-
+			print(pathInverted)		
 
 			
 
@@ -107,12 +105,9 @@ for j in range(0,len(allStations)-1):
 					cost = int(lineSeperated[x-1]) - int(lineSeperated[x+1])
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
 					stationNode.possibleMovesCost.append(abs(cost))
-	g.graph.append(stationNode)
+	g.graph[j] = stationNode
 
-       
-
-print(len(allStations))
-print(allStations)
+g.BFS(1,6)
 	
 
 # Create a graph given in 
