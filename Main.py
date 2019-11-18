@@ -133,4 +133,9 @@ for j in range(0,len(allStations)-1):
 
 #DEBUGGING
 #print(g.graph[1].possibleMoves)
-g.DFS(0,100)
+#g.DFS(0,100)
+
+f = open("AllStations3.txt", "w")
+for y in allStations:
+	f.write(y + "#")
+f.close()

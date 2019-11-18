@@ -1,0 +1,173 @@
+U Uhlandstr,52.5029°N, 13.3263°E
+U Kurfürstendamm,52.5036°N, 13.3311°E
+U Wittenbergplatz,52.5018°N, 13.3430°E
+U Nollendorfplatz,52.4994°N, 13.3545°E
+U Kurfürstenstr.,52.4998°N, 13.3628°E
+U Gleisdreieck,52.4996°N, 13.3743°E
+U Möckernbrücke,52.4991°N, 13.3827°E
+U Hallesches Tor,52.4978°N, 13.3908 °E
+U Prinzenstr.,52.4984°N, 13.4059°E
+U Kottbusser Tor,52.4990°N, 13.4183°E 
+U Görlitzer Bahnhof,52.4993°N, 13.4279°E
+U Schlesisches Tor,52.5009°N, 13.4415°E
+U Warschauer Str.,52.5050°N, 13.4491°E
+U Ruhleben,52.5256°N, 13.2412°E
+U Olympia-Stadion,52.5173°N, 13.2500°E
+U Neu-Westend,52.5163°N, 13.2602°E
+U Theodor-Heuss-Platz,52.5099°N, 13.2726°E
+U Kaiserdamm,52.5099°N, 13.2819°E
+U Sophie-Charlotte-Platz,52.5109°N, 13.2954°E
+U Bismarckstr.,52.5116°N, 13.3052°E
+U Deutsche Oper,52.5119°N, 13.3094°E
+U Ernst-Reuter-Platz,52.5115°N, 13.3222°E
+S+U Zoologischer Garten Bhf,52.5073°N, 13.3324°E
+U Bülowstr.,52.4976°N, 13.3634°E
+U Mendelssohn-Bartholdy-Park,52.5034°N, 13.3748°E
+S+U Potsdamer Platz (Bln) [U2],52.5095°N, 13.3788°E
+U Mohrenstr.,52.5118°N, 13.3852°E
+U Stadtmitte,52.5122°N, 13.3907°E
+U Hausvogteiplatz,52.5134°N, 13.3956°E
+U Spittelmarkt,52.5113°N, 13.4050°E
+U Märkisches Museum,52.5127°N, 13.4112°E
+U Klosterstr.,52.5180°N, 13.4120°E
+U Alexanderplatz,52.5204°N, 13.4144°E
+U Rosa-Luxemburg-Platz,52.5279°N, 13.4104°E
+U Senefelderplatz,52.5318°N, 13.4126°E
+U Eberswalder Str.,52.5417°N, 13.4122°E
+S+U Schönhauser Allee,52.5493°N, 13.4137°E
+U Vinetastr.,52.5594°N, 13.4133°E
+U Pankow,52.5664°N, 13.4105°E
+U-Bahnhof-Krumme-Lanke,52.4435°N, 13.2414°E
+U Onkel Toms Hütte,52.4499 °N, 13.2531 °E
+U Oskar-Helene-Heim,52.4503°N, 13.2698°E
+U Freie Universität (Thielplatz),52.4510°N, 13.2817°E
+U Dahlem-Dorf,52.4577°N, 13.2900°E
+U Podbielskiallee,52.4644°N, 13.2964°E
+U Breitenbachplatz,52.4673°N, 13.3094°E
+U Rüdesheimer Platz,52.4735°N, 13.3144°E
+S+U Heidelberger Platz,52.4802°N, 13.3119°E
+U Fehrbelliner Platz,52.4904°N, 13.3142°E
+U Hohenzollernplatz,52.4941°N, 13.3248°E
+U Spichernstr.,52.4966°N, 13.3311°E
+U Augsburger Str.,52.5003°N, 13.3365°E
+S+U Innsbrucker Platz,52.4781°N, 13.3421°E
+U Rathaus Schöneberg,52.4836°N, 13.3418°E
+U Bayerischer Platz,52.4884°N, 13.3402°E
+U Viktoria-Luise-Platz,52.4963°N, 13.3436°E
+U Schillingstr,52.5208°N, 13.4210°E
+U Strausberger Platz,52.5181°N, 13.4317°E
+U Weberwiese,52.5166°N, 13.4432°E
+U Frankfurter Tor,52.5158°N, 13.4540°E
+U Samariterstr,52.5148°N, 13.4644°E
+S+U Frankfurter Allee,52.5137°N, 13.4750°E
+U Magdalenenstr,52.5124°N, 13.4874°E
+S+U Lichtenberg,52.5096°N, 13.4973°E
+U Friedrichsfelde,52.5058°N, 13.5134°E
+U Tierpark,52.4969°N, 13.5235°E
+U Biesdorf-Sud,52.4996°N, 13.5465°E
+U Elsterwerdaer Platz,52.5056°N, 13.5615°E
+S+U Wuhletal,52.5127°N, 13.5752°E
+U Kaulsdorf-Nord,52.5210°N, 13.5889°E
+U Kienberg (Garten der Welt),52.5292°N, 13.5910°E
+U Cottbusser Platz,52.5339°N, 13.5965°E
+U Hellersdorf,52.5229°N, 13.5766°E
+U Louis-Lewin-Str.,52.5390°N, 13.6184°E
+U Honow,52.5382°N, 13.6344°E
+U Alt-Tegel,52.5895°N, 13.2837°E
+U Borsigwerke,52.5829°N, 13.2896°E
+U Holzhauser Str.,52.5762°N, 13.2956°E
+U Otisstr.,52.5711°N, 13.3029°E
+U Scharnweberstr.,52.5669°N, 13.3122°E
+U Kurt-Schumacher-Platz,52.5634°N, 13.3269°E
+U Afrikanische Str.,52.5605°N, 13.3343°E
+U Rehberge,52.5563°N, 13.3417°E
+U Seestr.,52.5503°N, 13.3524°E
+U Leopoldplatz,52.5463°N, 13.3590°E
+S+U Wedding,52.5426°N, 13.3666°E
+U Reinickendorfer Str,52.540515°N, 13.369878°E
+U Schwartzkopffstr.,52.5359°N, 13.3766°E
+U Naturkundemuseum,52.5313 °N, 13.3822 °E
+U Oranienburger Tor,52.5255°N, 13.3874°E
+S+U Friedrichstr. Bhf,52.5200°N, 13.3883°E
+U Französische Str,52.5143 °N, 13.3893 °E
+U Kochstr./Checkpoint Charlie,52.5065°N, 13.3905°E
+U Mehringdamm,52.4947°N, 13.3890°E
+U Platz der Luftbrücke,52.4835°N, 13.3865°E
+U Paradestr,52.4782°N, 13.3858°E
+S+U Tempelhof,52.4709°N, 13.3846°E
+U Alt-Tempelhof,52.4659°N, 13.3856°E
+U Kaiserin-Augusta-Str,52.4604°N, 13.3848°E
+U Ullsteinstr,52.4528°N, 13.3841°E
+U Westphalweg,52.4456°N, 13.3853°E
+U Alt-Mariendorf,52.4404°N, 13.3880°E
+S+U Rathaus Spandau,52.5347°N, 13.1992°E
+U Altstadt Spandau,52.5390 °N, 13.2056 °E
+U Zitadelle,52.5386 °N, 13.2140 °E
+U Haselhorst,52.5391 °N, 13.2337 °E
+U Paulsternstr,52.5381°N, 13.2486°E
+U Rohrdamm,52.5369°N, 13.2612°E
+U Siemensdamm,52.5368°N, 13.2732°E
+U Halemweg,52.5366°N, 13.2863°E
+U Jakob-Kaiser-Platz,52.536670°N, 13.294053°E
+S+U Jungfernheide Bhf,52.530882°N, 13.300382°E
+U Mierendorffplatz,52.5258 °N, 13.3053 °E
+U Richard-Wagner-Platz,52.5173°N, 13.3066°E
+U Wilmersdorfer Str,52.5057°N, 13.3070°E
+U Adenauerplatz,52.5000 °N, 13.3071 °E
+U Konstanzer Str,52.4940 °N, 13.3100 °E
+U Blissestr,52.4861°N, 13.3203°E
+U Berliner Str,52.4872 °N, 13.3314 °E
+U Eisenacher Str,52.4895°N, 13.3503°E
+U Kleistpark,52.4904°N, 13.3603°E
+S+U Yorckstr,52.4928°N, 13.3704°E
+U Gneisenaustr,52.4913°N, 13.3958°E
+U Südstern,52.4893°N, 13.4077°E
+U Hermannplatz,52.4866°N, 13.4245°E
+U Rathaus Neukölln,52.4816 °N, 13.4343 °E
+U Karl-Marx-Str,52.4765°N, 13.4392°E
+S+U Neukölln,52.4695°N, 13.4421°E
+U Grenzallee,52.4639°N, 13.4455°E
+U Blaschkoallee,52.4527°N, 13.4490°E
+U Parchimer Allee,52.4448°N, 13.4497°E
+U Britz-Süd,52.4373°N, 13.4484°E
+U Johannisthaler Chaussee,52.4294°N, 13.4533°E
+U Lipschitzallee,52.4247°N, 13.4625°E
+U Wutzkyallee,52.4257°N, 13.4740°E
+U Zwickauer Damm,52.4233 °N, 13.4837 °E
+U Rudow, 52.4162°N, 13.4953°E
+S+U Wittenau,52.5963°N, 13.3356°E
+U Rathaus Reinickendorf,52.5884°N, 13.3248°E
+S+U Karl-Bonhoeffer-Nervenklinik,52.5789 °N, 13.3332 °E
+U Lindauer Allee,52.5755 °N, 13.3391 °E
+U Paracelsus-Bad,52.5746°N, 13.3472°E
+U Residenzstr,52.5712°N, 13.3605°E
+U Franz-Neumann-Platz,52.5641 °N, 13.3642 °E
+U Osloer Str,52.5568°N, 13.3733°E
+U Pankstr,52.5525°N, 13.3818°E
+S+U Gesundbrunnen Bhf,52.548916°N, 13.388954°E
+U Voltastr,52.5421°N, 13.3930°E
+U Bernauer Str,52.5381 °N, 13.3962 °E
+U Rosenthaler Platz,52.5297°N, 13.4014°E
+U Weinmeisterstr,52.5255°N, 13.4050°E
+S+U Jannowitzbrücke,52.5142°N, 13.4196°E
+U Heinrich-Heine-Str,52.5109 °N, 13.4162 °E
+U Moritzplatz,52.5036 °N, 13.4108 °E
+U Schönleinstr,52.4933°N, 13.4217°E
+U Boddinstr,52.4807°N, 13.4249°E
+U Leinestr,52.4736°N, 13.4280°E
+S+U Hermannstr,52.4674 °N, 13.4314 °E
+S+U Rathaus Steglitz,52.4556°N, 13.3226°E
+U Schloßstr,52.4612°N, 13.3248°E
+U Walther-Schreiber-Platz,52.4662°N, 13.3283°E
+U Friedrich-Wilhelm-Platz,52.4714 °N, 13.3282 °E
+S+U Bundesplatz,52.4776 °N, 13.3291 °E
+U Güntzelstr,52.4920°N, 13.3309°E
+U Hansaplatz,52.5183°N, 13.3416°E
+U Turmstr,52.5254°N, 13.3412°E
+U Birkenstr,52.5323°N, 13.3414°E
+S+U Westhafen,52.5362°N, 13.3441°E
+U Amrumer Str,52.5422°N, 13.3495°E
+U Nauener Platz,52.5516°N, 13.3673°E
+U Brandenburger-Tor,52.5165 °N, 13.3817 °E
+U Bundestag,52.5202 °N, 13.3730 °E
+U Berlin-Hauptbahnof,52.5248 °N, 13.3697 °E
