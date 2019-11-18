@@ -78,7 +78,6 @@ class Graph:
 					a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
 					c = 2 * atan2(sqrt(a), sqrt(1 - a))
 					self.graph[possibleMove].heuristic = R * c
-					print(self.graph[possibleMove].heuristic)
 					self.graph[possibleMove].parentNode = self.graph[currentNode.id]
 					list.append(self.graph[possibleMove]) 
 					self.graph[possibleMove].visited = True
@@ -207,5 +206,4 @@ for j in range(0,len(allStations)-1):
 
 #DEBUGGING
 #print(g.graph[1].possibleMoves)
-g.Greedy(0,100)
-
+#g.Greedy(0,100)
