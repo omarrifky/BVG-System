@@ -1,5 +1,6 @@
 # Reading the data of the stations from a text file
 import os.path
+import time
 stationsTextFile = open(os.path.dirname(__file__)+"/Stations.txt", "r")
 uBahnData = stationsTextFile.read()
 stationsLatLangFile = open(os.path.dirname(__file__)+"/AllStationsLatLang.txt", "r")
@@ -25,6 +26,7 @@ class Node(object):
         self.heuristic = 0.0
         self.parentNode = None
         self.possibleMoves = []
+        self.Us = []
         self.possibleMovesCost = []
         self.id = ID
 # Graph Class has default dict of Nodes and the Traversals
@@ -36,6 +38,7 @@ class Graph:
 		self.graph = defaultdict(Node) 
 	#Greedy Traversal
 	def Greedy(self,startNode,goalNode):
+		startTimeGreedy = time.time()
 		#create list to put Nodes in
 		list = []
 		#add first Node and mark as visited
@@ -83,21 +86,39 @@ class Graph:
 					self.graph[possibleMove].visited = True
 		#If Goal Found
 		if not(goal.id ==-1):
-			pathInverted = []
+			path = []
 			#Tranverse Parents of Goal Node till start Node is reached and print path
 			while not (goal is None):
-				print(goal.id)
-				pathInverted.append(goal)
+				#print(goal.id)
+				path.insert(0,goal)
 				goal = goal.parentNode
-				
-			for x in pathInverted:
-				print(allStations[x.id])
+			currentUbahnLine = path[0].Us[0]
+			drive1 = path[0].id
+			drive2 = path[0].id
+			costOfTrip = 0
+			for i in range(0,len(path)-1):
+				if(path[i+1].Us.__contains__(currentUbahnLine)):
+					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
+					drive2 = path[i+1].id
+					if i == len(path)-2:
+						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+				else:
+					costOfTrip +=5
+					print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+					drive1 = drive2
+					drive2 = path[i+1].id
+					commonUbahnLine = set(path[i].Us).intersection(path[i+1].Us).pop()
+					print("Switch from U"+str(currentUbahnLine)+" To U"+str(commonUbahnLine))
+					currentUbahnLine = commonUbahnLine
+			print("Cost of Trip is :" + str(costOfTrip))	
+		print("Greedy Searching Time is " + str(time.time()-startTimeGreedy))
 
 
 
 
 	#DFS Traversal 
 	def DFS(self,startNode,goalNode): 
+		startTimeDFS = time.time()
 		# Create a stack for DFS 
 		stack = [] 
 		#push first startNode to start traversing DFS
@@ -123,18 +144,36 @@ class Graph:
 					self.graph[possibleMove].visited = True
 		#If Goal Found
 		if not(goal.id ==-1):
-			pathInverted = []
+			path = []
 			#Tranverse Parents of Goal Node till start Node is reached and print path
 			while not (goal is None):
-				print(goal.id)
-				pathInverted.append(goal)
+				#print(goal.id)
+				path.insert(0,goal)
 				goal = goal.parentNode
-				
-			for x in pathInverted:
-				print(allStations[x.id])
+			currentUbahnLine = path[0].Us[0]
+			drive1 = path[0].id
+			drive2 = path[0].id
+			costOfTrip = 0
+			for i in range(0,len(path)-1):
+				if(path[i+1].Us.__contains__(currentUbahnLine)):
+					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
+					drive2 = path[i+1].id
+					if i == len(path)-2:
+						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+				else:
+					costOfTrip +=5
+					print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+					drive1 = drive2
+					drive2 = path[i+1].id
+					commonUbahnLine = set(path[i].Us).intersection(path[i+1].Us).pop()
+					print("Switch from U"+str(currentUbahnLine)+" To U"+str(commonUbahnLine))
+					currentUbahnLine = commonUbahnLine
+			print("Cost of Trip is :" + str(costOfTrip))
+		print("DFS searching time is " + str(time.time()-startTimeDFS))
 
 	#BFS Traversal 
 	def BFS(self,startNode,goalNode): 
+		startTimeBFS = time.time()
 		# Create a queue for BFS 
 		queue = [] 
 		#enqueue first startNode to start traversing BFS
@@ -160,15 +199,32 @@ class Graph:
 					self.graph[possibleMove].visited = True
 		#If Goal Found
 		if not(goal.id ==-1):
-			pathInverted = []
+			path = []
 			#Tranverse Parents of Goal Node till start Node is reached and print path
 			while not (goal is None):
-				print(goal.id)
-				pathInverted.append(goal)
+				#print(goal.id)
+				path.insert(0,goal)
 				goal = goal.parentNode
-				
-			for x in pathInverted:
-				print(allStations[x.id])
+			currentUbahnLine = path[0].Us[0]
+			drive1 = path[0].id
+			drive2 = path[0].id
+			costOfTrip = 0
+			for i in range(0,len(path)-1):
+				if(path[i+1].Us.__contains__(currentUbahnLine)):
+					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
+					drive2 = path[i+1].id
+					if i == len(path)-2:
+						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+				else:
+					costOfTrip +=5
+					print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
+					drive1 = drive2
+					drive2 = path[i+1].id
+					commonUbahnLine = set(path[i].Us).intersection(path[i+1].Us).pop()
+					print("Switch from U"+str(currentUbahnLine)+" To U"+str(commonUbahnLine))
+					currentUbahnLine = commonUbahnLine
+			print("Cost of Trip is :" + str(costOfTrip))
+		print("BFS searching time is "+ str(time.time()-startTimeBFS))
 
 
 			
@@ -184,16 +240,18 @@ for line in linesSeperated:
 	for x in range (0,len(lineSeperated)-1,2):
          if not(allStations.__contains__(lineSeperated[x])):
              allStations.append(lineSeperated[x])
+startTimeGraph = time.time()
 #Create Graph
 g = Graph()
 #Add Edges with cost from each station to station
-for j in range(0,len(allStations)-1):
+for j in range(0,len(allStations)):
 	station = allStations[j]
 	stationNode = Node(j)
 	for line in linesSeperated:
 		lineSeperated = line.split(",")
-		for x in range (0,len(lineSeperated)-1):
+		for x in range (0,len(lineSeperated)):
 			if lineSeperated[x] == station:
+				stationNode.Us.append(linesSeperated.index(line)+1)
 				if (x + 3) < (len(lineSeperated)-1) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x+2]))): 
 					cost = int(lineSeperated[x+3]) - int(lineSeperated[x+1])
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
@@ -203,7 +261,7 @@ for j in range(0,len(allStations)-1):
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x-2]))
 					stationNode.possibleMovesCost.append(abs(cost))
 	g.graph[j] = stationNode
-
+print("Creating Graph Time is " + str(time.time()-startTimeGraph))
 #DEBUGGING
 #print(g.graph[1].possibleMoves)
-#g.Greedy(0,100)
+g.Greedy(0,100)
