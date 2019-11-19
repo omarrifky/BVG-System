@@ -101,6 +101,8 @@ class Graph:
 					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
 					drive2 = path[i+1].id
 					if i == len(path)-2:
+						if currentUbahnLine == 10:
+							currentUbahnLine= 55
 						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
 				else:
 					costOfTrip +=5
@@ -159,6 +161,8 @@ class Graph:
 					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
 					drive2 = path[i+1].id
 					if i == len(path)-2:
+						if currentUbahnLine == 10:
+							currentUbahnLine= 55
 						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
 				else:
 					costOfTrip +=5
@@ -214,6 +218,8 @@ class Graph:
 					costOfTrip+=path[i].possibleMovesCost[path[i].possibleMoves.index(path[i+1].id)]
 					drive2 = path[i+1].id
 					if i == len(path)-2:
+						if currentUbahnLine == 10:
+							currentUbahnLine= 55
 						print("Ride U"+str(currentUbahnLine)+" from : "+str(allStations[drive1]+" to : "+ str(allStations[drive2])))
 				else:
 					costOfTrip +=5
@@ -252,11 +258,11 @@ for j in range(0,len(allStations)):
 		for x in range (0,len(lineSeperated)):
 			if lineSeperated[x] == station:
 				stationNode.Us.append(linesSeperated.index(line)+1)
-				if (x + 3) < (len(lineSeperated)-1) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x+2]))): 
+				if (x + 3) < (len(lineSeperated)) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x+2]))): 
 					cost = int(lineSeperated[x+3]) - int(lineSeperated[x+1])
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x+2]))
 					stationNode.possibleMovesCost.append(abs(cost))
-				if x > 1 and x+1 < (len(lineSeperated)-1) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x-2]))):
+				if x > 1 and x+1 < (len(lineSeperated)) and not (stationNode.possibleMoves.__contains__(allStations.index(lineSeperated[x-2]))):
 					cost = int(lineSeperated[x-1]) - int(lineSeperated[x+1])
 					stationNode.possibleMoves.append(allStations.index(lineSeperated[x-2]))
 					stationNode.possibleMovesCost.append(abs(cost))
@@ -264,4 +270,5 @@ for j in range(0,len(allStations)):
 print("Creating Graph Time is " + str(time.time()-startTimeGraph))
 #DEBUGGING
 #print(g.graph[1].possibleMoves)
-g.Greedy(0,100)
+g.BFS(170,172)
+#print(g.graph[172].possibleMoves)
