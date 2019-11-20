@@ -11,4 +11,4 @@ The Code reads from 2 files one contains 10 Ubahn Lines and the other contains t
 The greedy uses a list to traverse the graph always removing node with lowest heuristic function.The BFS uses a queue to tranverse removing the first in. The DFS uses a stack to traverse removing last in.
 
 To run code g is the graph can use g.DFS(start,end) or g.BFS(start,end) or g.Greedy(start,end).
-start and end in the function are integers use file StationsIndex for Reference.
+start and end in the function are integers use file StopNames.txt for Reference.

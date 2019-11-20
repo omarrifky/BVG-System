@@ -1,3 +1,4 @@
+# All single character variables are indexes
 # Reading the data of the stations from a text file
 import os.path
 import time
@@ -38,6 +39,7 @@ class Graph:
 		self.graph = defaultdict(Node) 
 	#Greedy Traversal
 	def Greedy(self,startNode,goalNode):
+		expandedNodes = 0
 		startTimeGreedy = time.time()
 		#create list to put Nodes in
 		list = []
@@ -57,6 +59,7 @@ class Graph:
 		goal = Node(-1)
 		#while list not empty
 		while list:
+			expandedNodes+=1
 			#remove element with lowest heuristic cost
 			currentNode = list[0]
 			for node in list:
@@ -114,12 +117,14 @@ class Graph:
 					currentUbahnLine = commonUbahnLine
 			print("Cost of Trip is :" + str(costOfTrip))	
 		print("Greedy Searching Time is " + str(time.time()-startTimeGreedy))
+		print("Expanded Nodes : " + str(expandedNodes))
 
 
 
 
 	#DFS Traversal 
 	def DFS(self,startNode,goalNode): 
+		expandedNodes = 0
 		startTimeDFS = time.time()
 		# Create a stack for DFS 
 		stack = [] 
@@ -130,6 +135,7 @@ class Graph:
 		goal = Node(-1)
         # traversing the stack until its empty
 		while stack: 
+			expandedNodes+=1
 			# pop an element
 			currentNode = stack.pop()
 			# check if it is a goal if it is break from the loop goal found
@@ -174,10 +180,12 @@ class Graph:
 					currentUbahnLine = commonUbahnLine
 			print("Cost of Trip is :" + str(costOfTrip))
 		print("DFS searching time is " + str(time.time()-startTimeDFS))
+		print("Expanded Nodes : " + str(expandedNodes))
 
 	#BFS Traversal 
 	def BFS(self,startNode,goalNode): 
 		startTimeBFS = time.time()
+		expandedNodes= 0
 		# Create a queue for BFS 
 		queue = [] 
 		#enqueue first startNode to start traversing BFS
@@ -187,6 +195,7 @@ class Graph:
 		goal = Node(-1)
         # traversing the queue until its empty
 		while queue: 
+			expandedNodes+=1
 			# Dequeue an element
 			currentNode = queue.pop(0)
 			# check if it is a goal if it is break from the loop goal found
@@ -231,6 +240,7 @@ class Graph:
 					currentUbahnLine = commonUbahnLine
 			print("Cost of Trip is :" + str(costOfTrip))
 		print("BFS searching time is "+ str(time.time()-startTimeBFS))
+		print("Expanded Nodes : " + str(expandedNodes))
 
 
 			
@@ -269,6 +279,4 @@ for j in range(0,len(allStations)):
 	g.graph[j] = stationNode
 print("Creating Graph Time is " + str(time.time()-startTimeGraph))
 #DEBUGGING
-#print(g.graph[1].possibleMoves)
-g.BFS(170,172)
-#print(g.graph[172].possibleMoves)
+g.Greedy(76,137)
