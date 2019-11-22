@@ -59,6 +59,9 @@ class Graph:
 		goal = Node(-1)
 		#while list not empty
 		while list:
+			for node in list:
+				print(allStations[node.id],end = "")
+			print("   /// List State ")
 			expandedNodes+=1
 			#remove element with lowest heuristic cost
 			currentNode = list[0]
@@ -135,6 +138,9 @@ class Graph:
 		goal = Node(-1)
         # traversing the stack until its empty
 		while stack: 
+			for node in stack:
+				print(allStations[node.id],end = "")
+			print("   /// Stack State ")
 			expandedNodes+=1
 			# pop an element
 			currentNode = stack.pop()
@@ -195,6 +201,9 @@ class Graph:
 		goal = Node(-1)
         # traversing the queue until its empty
 		while queue: 
+			for node in queue:
+				print(allStations[node.id],end = "")
+			print("   /// Queue State ")
 			expandedNodes+=1
 			# Dequeue an element
 			currentNode = queue.pop(0)
@@ -279,4 +288,4 @@ for j in range(0,len(allStations)):
 	g.graph[j] = stationNode
 print("Creating Graph Time is " + str(time.time()-startTimeGraph))
 #DEBUGGING
-g.Greedy(76,137)
+g.Greedy(0,100)
